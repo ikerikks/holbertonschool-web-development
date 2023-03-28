@@ -4,27 +4,19 @@ body {
   width: 1440px;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
   color: #fff;
   font-family: 'Source Sans Pro';
   font-style: normal;
   overflow-x: hidden;
 }
 
-/* header */
-
 header {
-  /* position: absolute; */
   width: 1104px;
+  /* position: absolute; */
   display: flex;
-  margin-top: 36px;
-  margin-left: 176px;
+  justify-content: space-between;
+  margin: 36px 0px 0px 176px;
   z-index: 5;
-  background-color: #C271FF;
-}
-
-.logo {
-  margin-right: 703px;
 }
 
 .menu {
@@ -37,59 +29,61 @@ header {
 
 a {
   text-decoration:  none;
+  flex-direction: row;
   color: #fff;
+}
+
+/* general rules for sections and footer*/
+
+section,
+footer {
+  width: 1440px;
 }
 
 /* main section */
 
 .main-section {
-  /* width: 100vw; */
   height: 1093px;
-  /* height: 100vh; */
   position: absolute;
   left: 0px;
   top: 0px;
   background: url('./images/smile-background.png') no-repeat;
+  background-color: #071629;
   z-index: -3;
-  background-size: auto;
-  /* height: 100vh; */
-  /* background-size: 1449px 1055px; */
-  /* background-size: cover; */
-  /* background-color: aqua; */
+  margin-bottom: -20px;
 }
 
 .main-section h1 {
   font-size: 120px;
-  text-align: center;
-  margin-top:  250px;
-  margin-bottom: 10px;
+  margin: 220px 0px 10px 377px;
 }
 
 .slogan {
   font-size: 16px;
-  text-align: center;
   word-spacing: 60px;
+  margin: 0px 0px 38px 593px;
+
 }
 
-.main-section button {
+button {
   width: 162px;
   height: 44px;
+  margin: 0px 639px 168px 639px;
   border-radius: 22px;
   border: none;
   background: #C271FF;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  cursor: pointer;
   text-align: center;
-  margin-bottom: 168px;
+  z-index: 8;
+  cursor: pointer;
 }
 
 .main-section h2 {
-  text-align: center;
   font-size: 32px;
   font-weight: 300;
-  margin-bottom: 88px;
+  margin: 0px 0px 87px 604px;
 }
 
 .purple {
@@ -100,37 +94,39 @@ a {
 .professionals {
   display: flex;
   width: 1009px;
-  margin-left: 442px;
+  margin: 0px 0px 98px 222px;
 }
 
 .professionals div {
   width: 150px;
-
 }
 
-.professionals div:not(:first-child) {
+.professionals div:nth-child(3) {
   margin-left: 131px;
+}
+
+.professionals div:not(:first-child, :nth-child(3)) {
+  margin-left: 139px;
 }
 
 .professionals img {
   border-radius: 50%;
-  margin-bottom: 10px;
-  /* height: 150px;
-  width: 150px; */
 }
 
 .professionals h3 {
   font-size: 18px;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .professionals p {
   font-size: 16px;
   font-weight: 400;
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
+  margin-top: 2px;
 }
 
 /* testimonials section */
@@ -138,5 +134,259 @@ a {
 .testimonials-section {
   height: 392px;
   background: #C271FF;
-  margin-top: 1093px;
+  position: absolute;
+  top: 1093px;
+}
+
+.testimonial{
+  display: flex;
+  margin: 108px 0px 0px 260px;
+  font-size: 22px;
+}
+
+.testimonials-section img {
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  margin-right: 53px;
+}
+
+.texts {
+  width: 730px;
+}
+
+.texts blockquote {
+  margin: 0px;
+  
+}
+
+.name {
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.job-description {
+  font-style: italic;
+  margin: 0px 0px;
+}
+
+/* tutorial section */
+
+.tutorial-section {
+  width: 1228px;
+  /* height: 450px; */
+  position: absolute;
+  top: 1572px;
+  left: 106px;
+  right: 106px;
+}
+
+.tutorial-section h1 {
+  margin-left: 482px;
+  margin-bottom: 75px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #071629;
+}
+
+.video-items {
+  display: flex;
+  margin: 58px;
+}
+
+.video {
+  font-size: 14px;
+}
+
+.video:not(:first-child) {
+  margin-left: 30px;
+}
+
+.video > :not(:first-child) {
+  margin-left: 13px;
+}
+
+.video > img {
+  width: 255px;
+  height: 154px;
+  margin-bottom: 18px;
+}
+
+.video h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #071629;
+}
+
+.video > p {
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 14px;
+  width: 242px;
+  height: 48px;
+  color: #07162980;
+
+}
+
+.author {
+  display: flex;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.author img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+
+.author h3 {
+  margin-top: 0px;
+  color: #C271FF;
+}
+
+.rating {
+  display: flex;
+}
+
+.stars {
+  margin-right: 79px;
+}
+
+.stars img:not(:first-child) {
+  margin-left: 8px;
+}
+
+.rating p {
+  margin-top: 0px;
+  color: #C271FF;
+}
+
+/* membership-section */
+
+.membership-section {
+  position: absolute;
+  width: 1440px;
+  height: 502px;
+  top: 2109px;
+  background: #071629;
+}
+
+.membership-section h1 {
+  margin: 70px 0px 0px 617px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.memberships {
+  display: flex;
+  margin: 58px 164px 0px 164px;
+}
+
+.memberships > div:not(:first-child) {
+  margin-left: 22px;
+}
+
+.membership {
+  width: 257px; 
+  height: 153px;
+  text-align: center;
+
+}
+
+.membership h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+.membership p {
+  font-size: 14px;
+  line-height: 26px;
+  width: 215px;
+  margin: 13px auto;
+}
+
+.membership-section button {
+  margin-top: 98px;
+}
+
+/* FAQ-section */
+
+.FAQ-section {
+  position: absolute;
+  width: 920px;
+  height: 707px;
+  top: 2678px;
+  left: 249px;
+  color: #071629;
+  margin-bottom: 84px;
+}
+
+.FAQ-section h1 {
+  font-size: 60px;
+  font-weight: 300;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.FAQ-section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+.FAQ-section p {
+  font-size: 14px;
+  color: #07162980;
+  line-height: 24px;
+}
+
+.question-part-1,
+.question-part-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-part-2 {
+  margin-top: 74px;
+}
+
+.question {
+  width: 350px;
+  height: 242px;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  height: 249px;
+  top: 3469px;
+  background-color: #071629;
+}
+
+.illustrations {
+  display: flex;
+  margin-left: 165px;
+  margin-top: 90px;
+}
+
+.social-icons {
+  margin-left: 905px;
+}
+
+.social-icons :not(:first-child){
+  margin-left: 20px;
+}
+
+footer p {
+  font-size: 12px;
+  opacity: 0.35;
+  text-align: center;
+  margin-top: 70px;
 }
